@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
     }
 
     int results_count = 0;
-    int *results = (int *)malloc((argc / 3) * sizeof(int)); // Выделение памяти
+    int *results = (int *)malloc((argc / 3) * sizeof(int)); 
     if (!results) {
         fprintf(stderr, "Ошибка выделения памяти.\n");
         return 1;
@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 
     int i = 1;
     while (i < argc) {
-        if (strcmp(argv[i], "-k") == 0) break; // Найден ключ дешифрования
+        if (strcmp(argv[i], "-k") == 0) break; 
         if (i + 2 >= argc) {
             fprintf(stderr, "Некорректные аргументы.\n");
             free(results);
